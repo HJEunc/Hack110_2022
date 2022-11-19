@@ -72,8 +72,8 @@ def main(url1: str, url2: str):
 
     master_str: str = ""
     for item in master_list:
-        master_str += f"• {item}\n"
-    master_str += " •"
+        master_str += f"•  {item}\n"
+    master_str += "  •"
 
     duplicates: list[str] = []
     for item in required1:
@@ -82,8 +82,8 @@ def main(url1: str, url2: str):
 
     master_dup: str = ""
     for item in duplicates:
-        master_dup += f"• {item} \n "
-    master_dup += " •"
+        master_dup += f"•  {item} \n "
+    master_dup += "  •"
 
     exclude: list[str] = ["COMP 496", "CO9210MP 690", "COMP 692", "COMP 790"]
   
