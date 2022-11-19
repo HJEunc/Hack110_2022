@@ -45,8 +45,6 @@ def main(url1: str, url2: str):
                 required1.append(required_course[7:15])
         if required_course[0:7] == "<title>":
             name_of_mag = required_course[7:got_u - i]
-    print(name_of_mag)
-    print(required1)
 
     required2: list[str] = []
     name_of_mag_2: str = ""
@@ -64,8 +62,6 @@ def main(url1: str, url2: str):
                 required2.append(required_course[7:15])
         if required_course[0:7] == "<title>":
             name_of_mag_2 = required_course[7:got_u_2 - i]
-    print(name_of_mag_2)
-    print(required2)
 
     master_list: list[str] = []
     for i in range(len(required1)):
@@ -73,12 +69,11 @@ def main(url1: str, url2: str):
     for i in required2:
         if i not in master_list:
             master_list.append(i)
-    print(master_list)
 
     master_str: str = ""
     for item in master_list:
-        master_str += f"- {item}\n"
-    master_str += " -"
+        master_str += f"• {item}\n"
+    master_str += " •"
 
     duplicates: list[str] = []
     for item in required1:
@@ -87,10 +82,10 @@ def main(url1: str, url2: str):
 
     master_dup: str = ""
     for item in duplicates:
-        master_dup += f"- {item}\n"
-    master_dup += " -"
+        master_dup += f"• {item} \n "
+    master_dup += " •"
 
-    exclude: list[str] = ["COMP 496", "COMP 690", "COMP 692", "COMP 790"]
+    exclude: list[str] = ["COMP 496", "CO9210MP 690", "COMP 692", "COMP 790"]
   
     for i in range(len(master_str)):
         if master_str[i] in exclude:
