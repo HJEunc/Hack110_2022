@@ -85,6 +85,13 @@ h2 {
   font-size: 90%;
 }
 
+h3 {
+  text-align: center;
+  color: #003444;
+  font-family: gill sans, sans-serif;
+  font-size: 80%;
+}
+
 p {
   text-align: center;
   color: #2c1376;

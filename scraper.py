@@ -85,15 +85,6 @@ def main(url1: str, url2: str):
         master_dup += f"•  {item} \n "
     master_dup += "  •"
 
-    exclude: list[str] = ["COMP 496", "CO9210MP 690", "COMP 692", "COMP 790"]
-  
-    for i in range(len(master_str)):
-        if master_str[i] in exclude:
-            master_str.pop(i)
-    for i in range(len(master_dup)):
-        if master_dup[i] in exclude:
-            master_dup.pop(i)
-
     output: list[str] = [name_of_mag, name_of_mag_2, master_str, master_dup]
 
     return output
